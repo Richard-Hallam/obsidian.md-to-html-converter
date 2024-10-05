@@ -21,9 +21,18 @@ def insert_characters_into_list(list):
     return result        
 
 
-def convert_to_html(list):
-    pass
+#returns a 4 character long string
+def return_string_segment_from_list(list_of_chars, count):
+    return_string = list_of_chars[count] + list_of_chars[count1] + list_of_chars[count+2] + list_of_chars[count +3]
 
+
+def convert_to_html(list_of_chars):
+    count = 0
+    while count < len(list_of_chars):
+        pass
+        
+    
+    
 files_to_process = ['flexbox.md']
 #print(insert_lines_into_list(files_to_process))
 insert_characters_into_list(insert_lines_into_list(files_to_process))
