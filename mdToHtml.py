@@ -37,9 +37,16 @@ def convert_to_html(list_of_chars):
         if return_string_segment_from_list(list_of_chars, count, 1) == '`' and open_code_tag == False:
             open_code_tag = True
             line_to_return.append('<code>')
-        if return_string_segment_from_list(list_of_chars, count, 1) == '`' and open_code_tag == True:
+        elif return_string_segment_from_list(list_of_chars, count, 1) == '`' and open_code_tag == True:
             open_code_tag = False
             line_to_return.append('</code>')
+        elif return_string_segment_from_list(list_of_chars, count, 3) == ('***' or '___') and open_bold_and_em_tag == False:
+            open_bold_and_em_tag = True
+            line_to_return.append('<b><em>')
+        elif return_string_segment_from_list(list_of_chars, count, 3) == ('***' or '___') and open_bold_and_em_tag == False:
+            open_bold_and_em_tag = True
+            line_to_return.append('</b></em>')
+            
         
         
     
