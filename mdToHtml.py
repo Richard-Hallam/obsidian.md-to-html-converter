@@ -16,9 +16,13 @@ def insert_characters_into_list(list):
     for i in list:
         for char in i:
             result.append(char)
+        result.append('\n')#separates lines later.
     print(result)
     return result        
-    
+
+
+def convert_to_html(list):
+    pass
 
 files_to_process = ['flexbox.md']
 #print(insert_lines_into_list(files_to_process))
