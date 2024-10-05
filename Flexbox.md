@@ -2,7 +2,7 @@ Flexbox is  a css tool to arrange content within a container. You set a containe
 
 Flexboxes have multiple properties to arrange content they are as follows.
 
-<h3>flex-direction</h3>
+###flex-direction
 The flex direction property defines in which direction the container wants to stack the flex items. It it configured by passing it the following values.
 
 	`flex-direction: column` 
