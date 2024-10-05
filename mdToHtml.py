@@ -33,6 +33,14 @@ def convert_to_html(list_of_chars):
     count = 0
     line_to_return = ''
     open_code_tag = False
+    open_bold_and_em_tag= False
+    open_h6_tag = False
+    open_h5_tag = False
+    open_h4_tag = False
+    open_h3_tag = False
+    open_h2_tag = False
+    open_h1_tag = False
+    open_h_tag = False      
     while count < len(list_of_chars):
         if return_string_segment_from_list(list_of_chars, count, 1) == '`' and open_code_tag == False:
             open_code_tag = True
@@ -46,8 +54,30 @@ def convert_to_html(list_of_chars):
         elif return_string_segment_from_list(list_of_chars, count, 3) == ('***' or '___') and open_bold_and_em_tag == False:
             open_bold_and_em_tag = True
             line_to_return.append('</b></em>')
-            
-        
+        elif return_string_segment_from_list(list_of_chars, count, 6 ) == ('######') and open_h6_tag == False and open_h_tag == False:
+            open_h6_tag = True
+            open_h_tag = True
+            line_to_return.append('<h6>')
+        elif return_string_segment_from_list(list_of_chars, count, 5) == ('#####') and open_h5_tag == False and open_h_tag == False:
+            open_h5_tag = True
+            open_h_tag = True
+            line_to_return.append('<h5>')
+        elif return_string_segment_from_list(list_of_chars, count, 4) == ('####') and open_h4_tag == False and open_h_tag == False:
+            open_h5_tag = True
+            open_h_tag = True
+            line_to_return.append('<h4>')
+        elif return_string_segment_from_list(list_of_chars, count, 3) == ('###') and open_h3_tag == False and open_h_tag == False:
+            open_h5_tag = True
+            open_h_tag = True
+            line_to_return.append('<h3>')
+        elif return_string_segment_from_list(list_of_chars, count, 2) == ('##') and open_h2_tag == False and open_h_tag == False:
+            open_h5_tag = True
+            open_h_tag = True
+            line_to_return.append('<h2>')
+        elif return_string_segment_from_list(list_of_chars, count, 1) == ('#') and open_h1_tag == False and open_h_tag == False:
+            open_h5_tag = True
+            open_h_tag = True
+            line_to_return.append('<h1>')
         
     
     
