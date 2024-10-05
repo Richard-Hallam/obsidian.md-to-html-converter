@@ -22,14 +22,25 @@ def insert_characters_into_list(list):
 
 
 #returns a 4 character long string
-def return_string_segment_from_list(list_of_chars, count):
-    return_string = list_of_chars[count] + list_of_chars[count1] + list_of_chars[count+2] + list_of_chars[count +3]
+def return_string_segment_from_list(list_of_chars, count, length):
+    return_string = ''
+    for i in range(count, (count+length), 1):
+        return_string.append(list_of_chars[i])
+        
 
 
 def convert_to_html(list_of_chars):
     count = 0
+    line_to_return = ''
+    open_code_tag = False
     while count < len(list_of_chars):
-        pass
+        if return_string_segment_from_list(list_of_chars, count, 1) == '`' and open_code_tag == False:
+            open_code_tag = True
+            line_to_return.append('<code>')
+        if return_string_segment_from_list(list_of_chars, count, 1) == '`' and open_code_tag == True:
+            open_code_tag = False
+            line_to_return.append('</code>')
+        
         
     
     
