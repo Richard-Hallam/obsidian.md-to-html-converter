@@ -1,12 +1,12 @@
 Flexbox is  a css tool to arrange content within a container. You set a container to be a flexbox by using `display:flex` 
 
-Flexboxes have multiple properties to arrange content they are as follows.
+######Flexboxes have multiple properties to arrange content they are as follows.
 
 ###flex-direction
 The flex direction property defines in which direction the container wants to stack the flex items. It it configured by passing it the following values.
 
 	`flex-direction: column` 
-This stacks the flex items vertically from top to bottom
+#####This stacks the flex items vertically from top to bottom
 
 	`flex-direction: reverse-column`
 This stacks the flex items vertically in reverse order.
@@ -18,13 +18,13 @@ This stacks the flex items horizontally from right to left.
 
 when you set the direction to a reversed row or column, start and end are also reversed.
 
-Notice that when the flex direction is a column, `justify-content` changes to the vertical and `align-items` to the horizontal.
+####Notice that when the flex direction is a column, `justify-content` changes to the vertical and `align-items` to the horizontal.
 <h3>flex-wrap</h3>
-The `flex-wrap` property specifies whether the flex items should wrap or not. Wrapping prevents flex items being forced onto a single line.
+###The `flex-wrap` property specifies whether the flex items should wrap or not. Wrapping prevents flex items being forced onto a single line.
 
-if given the value `nowrap` then flex items are forced onto a single line.
+##if given the value `nowrap` then flex items are forced onto a single line.
 
-if given the value `wrap` then the items will flow onto multiple lines if needed.
+#if given the value `wrap` then the items will flow onto multiple lines if needed.
 
 `wrap-reverse` will wrap onto multiple lines but reverse the order.
 

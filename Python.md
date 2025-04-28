@@ -1,0 +1,44 @@
+Python is a high level programming language. It i designed to be easily readable. It uses indentation to define scope. Python is an [[interpreted language]] 
+
+Python is referred to as a 'batteries included' programming language. This is due to a large number of packages available in a library that have been created for it. As an open-source project, many prewritten packages allow you to construct projects quickly. Python can be used as a scripting language for automating simple tasks or for creating web applications. It supports multiple programming paradigms including [[functional programming]], [[Imperative Programming]], [[object-orientated programming]] and [[procedural programming]]. The python libraries and interpreter are available for all major platforms. However, Python cannot run in a web browser so is used for backend web development.
+
+[[JavaScript]] is an [[object-orientated programming]] language that is mainly used for web development. It is the only programming language that will run in a web browser so is uniquely suited for frontend development. It allows you to add dynamic interactivity in your web app that would not be possible with [[HTML]]/[[CSS ]]alone. However, it can be used for [[backend development ]]where it competes directly with Python. [[JavaScript]] also supports [[functional programming]]and [[imperative programming]] paradigms. There are built-in modules such as date but not the many libraries that Python has.
+
+Python uses a newline as a statement terminator. If you want to create a code block, then indentation with spaces is used to define this. The standard is four-space indentation. This makes the code visually very clear to read.
+
+# A Python if statement:
+`if some_value:`
+    `print('Value is True!')`
+`else:`
+    `print('Value is False!')`
+    
+
+JavaScript uses a semicolon as a statement terminator. Code blocks are enclosed in curly brackets.
+
+`// A JavaScript conditional statement:`
+`if (i <= 10) {`
+  `console.log("Small number!");`
+`} else {`
+  `console.log("Big number!");`
+`}`
+
+Python is a [[strongly-typed language]]. This means there is no implicit data type conversion. You as the programmer, have to convert data to whichever type is needed before using it. For example, the string '10' would require conversion to an integer 10 before doing any arithmetic.
+
+JavaScript is a [[weakly-typed language]]. Therefore it will do implicit data type conversion. If you were to add `'10'` to `10` it would return the string `'1010'`. To get `20` you would need to explicitly state `Number('10')` to convert to a number.
+
+In Python, multiple data types can be divided into mutable and immutable. Mutable objects are those that can have their values changed after assignment while immutable objects cannot. A list is mutable while a tuple is not. You will learn more about this in the upcoming lessons. These many data types, such as dictionaries and sets, make Python very useful in the fields of data analytics or computing science. Python also supports many numeric data types. You can have integers, floats and fixed-point decimals for example.
+
+In JavaScript objects and arrays are mutable but primitive data types such as Number, Boolean and null are not. However, it does support the use of arrays where Python uses lists instead. [[JavaScript]] only supports floating-point variables for numeric data types.
+
+Pythons built in [[interpreter]] allows you to run your code on your system. This is known as Read, Eval, Print, Loop (REPL). You can very quickly build a project as you can quickly evaluate your code for bugs and fix them.
+
+You cannot run a JavaScript file directly on your computer. JavaScript runs in a browser. However, it is possible to run code in specifically designed REPL software.
+
+In summary, Python is ideal for tasks requiring data manipulation and analysis. It can be used for data analytics, machine learning or math-intensive applications but is also ideal for creating web app backend servers. Python can be used for almost everything that JavaScript can do. Python is arguably easier to learn. JavaScript has its niche in web interactivity as it can run directly in the browser.
+
+[[Python  variables]]
+[[Python Functions]]
+[[Python data types]]
+	 [[Python Strings]]
+[[Python None]]
+
