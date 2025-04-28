@@ -58,7 +58,19 @@ def insert_lines_into_list(files):
             print(f"Skipping non-Markdown file: '{file}'")
     return result
 
-def convert_to_html(lines):
+
+def detect_table(lines):
+    table_detected = False
+    for line in lines:
+        if line.startswith('|') and table_detected == False:
+            table_detected = True
+            print('table detected')
+            if line.startswith('|') != True:
+                table_detected = False
+                print('end of table')
+            
+
+def convert_headers(lines):
     header_map = {
         '######': '<h6>',
         '#####': '<h5>',
@@ -78,6 +90,11 @@ def convert_to_html(lines):
         html_lines.append(line)
 
     return '\n'.join(html_lines)
+
+
+def convert_to_html(lines):
+    lines = convert_headers(lines)
+    lines = detect_table(lines)
 
 files_to_process = ['Flexbox.md']
 lines_to_print = insert_lines_into_list(files_to_process)
