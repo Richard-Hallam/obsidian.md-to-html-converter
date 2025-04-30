@@ -52,6 +52,7 @@ def insert_lines_into_list(files):
         if os.path.isfile(file) and file.endswith('.md'):
             try:
                 result.extend(file_import(file))
+                print(result)
             except Exception as e:
                 print(f"Error processing file '{file}': {e}")
         else:
@@ -59,16 +60,18 @@ def insert_lines_into_list(files):
     return result
 
 
-def detect_table(lines):
-    table_detected = False
+def convert_table(lines):
+    table_lines = []
+    print(type(lines))
     for line in lines:
-        if line.startswith('|') and table_detected == False:
-            table_detected = True
-            print('table detected')
-            if line.startswith('|') != True:
-                table_detected = False
-                print('end of table')
-            
+        if line.startswith('|'):
+            line = line.replace('|', '<td>').replace('\n', '</td>\n')
+            line = line.replace('<td>', '<tr><td>').replace('</td>', '</td></tr>')
+        table_lines.append(line)
+    return table_lines
+
+
+
 
 def convert_headers(lines):
     header_map = {
@@ -88,13 +91,13 @@ def convert_headers(lines):
                 line = line.replace(header, f"{tag}{line[len(header):]}</{tag[1:]}")
                 break
         html_lines.append(line)
-
-    return '\n'.join(html_lines)
+    return html_lines
 
 
 def convert_to_html(lines):
     lines = convert_headers(lines)
-    lines = detect_table(lines)
+    lines = convert_table(lines)
+    return '\n'.join(lines)+ '\n'
 
 files_to_process = ['Flexbox.md']
 lines_to_print = insert_lines_into_list(files_to_process)
