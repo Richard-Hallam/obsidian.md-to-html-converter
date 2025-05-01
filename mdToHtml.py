@@ -46,7 +46,15 @@ def convert_table(lines):
     return table_lines
 
 
-
+def convert_paragraphs(lines):
+    paragraph_lines = []
+    for line in lines:
+        if line.startswith('<'):
+            paragraph_lines.append(line)
+        else:
+            line = '<p>' + line + '<p/>'
+            paragraph_lines.append(line)
+    return paragraph_lines
 
 def convert_headers(lines):
     header_map = {
@@ -72,6 +80,7 @@ def convert_headers(lines):
 def convert_to_html(lines):
     lines = convert_headers(lines)
     lines = convert_table(lines)
+    lines = convert_paragraphs(lines)
     return '\n'.join(lines)+ '\n'
 
 file_to_process = 'Flexbox.md'

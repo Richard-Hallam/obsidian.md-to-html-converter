@@ -1,73 +1,73 @@
-Flexbox is  a css tool to arrange content within a container. You set a container to be a flexbox by using `display:flex`
-
+<p>Flexbox is  a css tool to arrange content within a container. You set a container to be a flexbox by using `display:flex`<p/>
+<p><p/>
 <h6>Flexboxes have multiple properties to arrange content they are as follows.</h6>Flexboxes have multiple properties to arrange content they are as follows.
-
+<p><p/>
 <h3>flex-direction</h3>flex-direction
-The flex direction property defines in which direction the container wants to stack the flex items. It it configured by passing it the following values.
-
-`flex-direction: column`
+<p>The flex direction property defines in which direction the container wants to stack the flex items. It it configured by passing it the following values.<p/>
+<p><p/>
+<p>`flex-direction: column`<p/>
 <h5>This stacks the flex items vertically from top to bottom</h5>This stacks the flex items vertically from top to bottom
-
-`flex-direction: reverse-column`
-This stacks the flex items vertically in reverse order.
-
-`flex-direction: row`
-This stacks the flex items horizontally from left to right.
-`flex-direction: row-reverse`
-This stacks the flex items horizontally from right to left.
-
-when you set the direction to a reversed row or column, start and end are also reversed.
-
+<p><p/>
+<p>`flex-direction: reverse-column`<p/>
+<p>This stacks the flex items vertically in reverse order.<p/>
+<p><p/>
+<p>`flex-direction: row`<p/>
+<p>This stacks the flex items horizontally from left to right.<p/>
+<p>`flex-direction: row-reverse`<p/>
+<p>This stacks the flex items horizontally from right to left.<p/>
+<p><p/>
+<p>when you set the direction to a reversed row or column, start and end are also reversed.<p/>
+<p><p/>
 <h4>Notice that when the flex direction is a column, `justify-content` changes to the vertical and `align-items` to the horizontal.</h4>Notice that when the flex direction is a column, `justify-content` changes to the vertical and `align-items` to the horizontal.
 <h3>flex-wrap</h3>
 <h3>The `flex-wrap` property specifies whether the flex items should wrap or not. Wrapping prevents flex items being forced onto a single line.</h3>The `flex-wrap` property specifies whether the flex items should wrap or not. Wrapping prevents flex items being forced onto a single line.
-
+<p><p/>
 <h2>if given the value `nowrap` then flex items are forced onto a single line.</h2>if given the value `nowrap` then flex items are forced onto a single line.
-
+<p><p/>
 <h1>if given the value `wrap` then the items will flow onto multiple lines if needed.</h1>if given the value `wrap` then the items will flow onto multiple lines if needed.
-
-`wrap-reverse` will wrap onto multiple lines but reverse the order.
-
+<p><p/>
+<p>`wrap-reverse` will wrap onto multiple lines but reverse the order.<p/>
+<p><p/>
 <h3>flex-flow</h3>
-The `flex-flow` property is a shorthand for setting both the `flex-direction` and `flex-wrap` properties.
-
-its usage is `flex-flow: row wrap;`
-
+<p>The `flex-flow` property is a shorthand for setting both the `flex-direction` and `flex-wrap` properties.<p/>
+<p><p/>
+<p>its usage is `flex-flow: row wrap;`<p/>
+<p><p/>
 <h3>justify-content</h3>
-The `justify-content` property is used to align the flex items.
-
-values are as follows
-`center`
-`flex-start`
-`flex-end`
-`space-around`--displays the flex items with space before, between and after the lines
-`space-between`--displays the flex items with space between the lines.
-
+<p>The `justify-content` property is used to align the flex items.<p/>
+<p><p/>
+<p>values are as follows<p/>
+<p>`center`<p/>
+<p>`flex-start`<p/>
+<p>`flex-end`<p/>
+<p>`space-around`--displays the flex items with space before, between and after the lines<p/>
+<p>`space-between`--displays the flex items with space between the lines.<p/>
+<p><p/>
 <h3>align-items</h3>
-The `align-items` property is used to align the flex items within the container.
-
-values are as follows
-`center`--middle of the container
-`flex-start`--top of the container
-`flex-end`--bottom of the container
-`stretch`--Stretches the flex items to fill the container. This is the default value.
-`baseline`--aligns to the baseline for example the text baseline.
-
-
+<p>The `align-items` property is used to align the flex items within the container.<p/>
+<p><p/>
+<p>values are as follows<p/>
+<p>`center`--middle of the container<p/>
+<p>`flex-start`--top of the container<p/>
+<p>`flex-end`--bottom of the container<p/>
+<p>`stretch`--Stretches the flex items to fill the container. This is the default value.<p/>
+<p>`baseline`--aligns to the baseline for example the text baseline.<p/>
+<p><p/>
+<p><p/>
 <h3>align-content</h3>
-The `align-content` property is used to align the lines of flex items
-
-values are as follows
-`space-between`--displays the flex lines with equal space between them.
-`space-around`--displays the flex lines with space before, between and after them
-`center`--middle of the container
-`flex-start`--top of the container
-`flex-end`--bottom of the container
-`stretch`--Stretches the flex items to fill the container. This is the default value.
-
-
+<p>The `align-content` property is used to align the lines of flex items<p/>
+<p><p/>
+<p>values are as follows<p/>
+<p>`space-between`--displays the flex lines with equal space between them.<p/>
+<p>`space-around`--displays the flex lines with space before, between and after them<p/>
+<p>`center`--middle of the container<p/>
+<p>`flex-start`--top of the container<p/>
+<p>`flex-end`--bottom of the container<p/>
+<p>`stretch`--Stretches the flex items to fill the container. This is the default value.<p/>
+<p><p/>
+<p><p/>
 <h3>Summary</h3>
-
+<p><p/>
 <tr><td> **property**          <tr><td> **What does it do?**                                                                                                                                                                          <tr><td> **Default value** <tr><td> **Other values**                                                            <tr><td>
 <tr><td> --------------------- <tr><td> --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- <tr><td> ----------------- <tr><td> --------------------------------------------------------------------------- <tr><td>
 <tr><td> flex-direction        <tr><td> This controls how the child elements are arranged by setting the **main axis** (horizontal for row, vertical for column) and direction (left to right or reversed, top to bottom or reversed) <tr><td> row               <tr><td> column  <br>row-reverse  <br>column-reverse                                 <tr><td>
@@ -76,6 +76,6 @@ values are as follows
 <tr><td> align-items           <tr><td> Controls how elements are distributed on the **cross axis** (opposite to the **main axis** , as described above)                                                                              <tr><td> stretch           <tr><td> flex-start  <br>flex-end  <br>center  <br>baseline                          <tr><td>
 <tr><td> gap                   <tr><td> Sets a **minimum** space **between** elements.                                                                                                                                                <tr><td> 0px               <tr><td> length (e.g. 10px)                                                          <tr><td>
 <tr><td> Flex-flow (shorthand) <tr><td> Sets flex-direction and flex-wrap in a single property                                                                                                                                        <tr><td> row nowrap        <tr><td> See **flex-direction** and **flex-wrap**                                    <tr><td>
-
-d
+<p><p/>
+<p>d<p/>
 <tr><td>
